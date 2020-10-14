@@ -14,7 +14,7 @@ Visualize Markdown as Mindmap (A.K.A Markmap) to VSCode's built-in markdown prev
 
 ## Installation
 
-To install this extension go to `View->Extensions` and search for `Markdown Preview Markmap Support`. Next click Install.
+To install this extension go to `View->Extensions` and search for `markdown-markmap`. Next click Install.
 
 ## Usage
 
