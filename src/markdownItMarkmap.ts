@@ -2,8 +2,8 @@ const Markmap = require('markmap-lib/dist/transform');
 import { Base64 } from 'js-base64';
 import MarkdownIt = require('markdown-it');
 
-//const _idRecognizer = /^\s*(markmap|mdmm)((\s+|:|\{)[^`~]*)?$/i;
-const _idRecognizer = /^(markmap|mdmm)$/i;
+//const _idRecognizer = /^\s*(markmap|mdmm|mmmd)((\s+|:|\{)[^`~]*)?$/i;
+const _idRecognizer = /^(markmap|mdmm|mmmd)$/i;
 
 export default function markdownItMarkmap(md: MarkdownIt) {
     const fallback = md.renderer.rules.fence?.bind(md.renderer.rules);

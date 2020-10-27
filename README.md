@@ -18,7 +18,7 @@ To install this extension go to `View->Extensions` and search for `markdown-mark
 
 ## Usage
 
-Create mindmap in markdown using `markmap` (or `mdmm`) fenced code blocks:
+Create mindmap in markdown using `markmap` (or `mdmm` or `mmmd`) fenced code blocks:
 
 ~~~markdown
 ```markmap {scale=1.1}
