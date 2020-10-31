@@ -1,6 +1,6 @@
-const Markmap = require('markmap-lib/dist/transform');
-import { Base64 } from 'js-base64';
 import MarkdownIt = require('markdown-it');
+import { transform } from 'markmap-lib/dist/transform';
+import { Base64 } from 'js-base64';
 
 //const _idRecognizer = /^\s*(markmap|mdmm|mmmd)((\s+|:|\{)[^`~]*)?$/i;
 const _idRecognizer = /^(markmap|mdmm|mmmd)$/i;
@@ -14,7 +14,7 @@ export default function markdownItMarkmap(md: MarkdownIt) {
         if (_idRecognizer.test(token.info)) {
             try {
                 const attrs = token.attrs ? token.attrs.map(e => ({ [e[0].toLowerCase()]: e[1] })) : [];
-                const { root } = Markmap.transform(token.content);
+                const { root } = transform(token.content);
                 const data = { attrs: Object.assign({}, ...attrs), root };
 
                 return `<svg class="markmap">${Base64.encode(JSON.stringify(data))}</svg>`;
