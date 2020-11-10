@@ -1,6 +1,6 @@
 'use strict';
 
-import { Markmap } from 'markmap-lib/dist/view';
+import { Markmap } from 'markmap-view';
 import { Base64 } from 'js-base64';
 
 const _svgOptions = {

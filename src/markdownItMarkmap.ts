@@ -1,5 +1,5 @@
 import MarkdownIt = require('markdown-it');
-import { transform } from 'markmap-lib/dist/transform';
+import { transform } from 'markmap-lib';
 import { Base64 } from 'js-base64';
 
 //const _idRecognizer = /^\s*(markmap|mdmm|mmmd)((\s+|:|\{)[^`~]*)?$/i;
