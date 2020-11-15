@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/phoihos/vscode-markdown-markmap/blob/master/README.md",
 	"license": "MIT",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -79,7 +79,6 @@
 	},
 	"dependencies": {
 		"js-base64": "^3.6.0",
-		"markdown-it-attrs": "^3.0.3",
 		"markmap-lib": "^0.10.1",
 		"markmap-view": "^0.1.1"
 	}
