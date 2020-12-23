@@ -2,9 +2,10 @@
 
 All notable changes to the "Markdown Preview Markmap Support" extension will be documented in this file.
 
-## [1.x.0] - yyyy-mm-dd
+## [1.2.0] - 2020-12-23
 
 - Refactored : Build attributes feature
+- Updated : Internal dependencies
 
 ## [1.1.0] - 2020-11-15
 

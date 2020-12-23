@@ -1,5 +1,5 @@
 import MarkdownIt = require('markdown-it');
-import { transform } from 'markmap-lib';
+import { Transformer } from 'markmap-lib';
 import { Base64 } from 'js-base64';
 import { buildAttributes } from './buildAttributes'
 
@@ -15,7 +15,7 @@ export default function markdownItMarkmap(md: MarkdownIt) {
         if (_idRecognizer.test(token.info)) {
             try {
                 const attrs = buildAttributes(token.info, token.attrs);
-                const { root } = transform(token.content);
+                const { root } = (new Transformer()).transform(token.content);
                 const data = { attrs, root };
 
                 return `<svg class="markmap">${Base64.encode(JSON.stringify(data))}</svg>`;
