@@ -2,6 +2,10 @@
 
 All notable changes to the "Markdown Preview Markmap Support" extension will be documented in this file.
 
+## [1.2.3] - 2021-06-11
+
+- Updated : Internal dependencies to solve security vulnerabilities
+
 ## [1.2.2] - 2021-05-07
 
 - Updated : Internal dependencies to solve security vulnerabilities
