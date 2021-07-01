@@ -4,7 +4,7 @@ All notable changes to the "Markdown Preview Markmap Support" extension will be 
 
 ## [1.3.0] - 2021-07-01
 
-- Updated : Code highlighting only inside markmap contents ([Related issue #4](https://github.com/phoihos/vscode-markdown-markmap/issues/4))
+- Changed : Code highlighting only inside markmap contents ([Related issue #4](https://github.com/phoihos/vscode-markdown-markmap/issues/4))
 
 ## [1.2.3] - 2021-06-11
 
