@@ -5,13 +5,35 @@ import { Base64 } from 'js-base64';
 
 const _svgOptions = {
   style: (id) => {
-    return `.${id}-fo pre {
+    return `\
+.${id}-container code[class*=language-], .${id}-container pre[class*=language-] {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none
+}
+.${id}-container pre[class*=language-] {
+  margin: 0;
   padding: .2em .4em;
-  font-size: calc(1em - 2px);
-  color: #555;
-  background-color: #f0f0f0;
-  border-radius: 2px;
-}`;
+  overflow: auto
+}
+.${id}-container :not(pre)>code[class*=language-] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal
+}
+`
   },
   autoFit: true
 };

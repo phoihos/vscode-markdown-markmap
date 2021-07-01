@@ -7,7 +7,7 @@ module.exports = {
   target: 'node',
   entry: [
     './src/renderer/markmap.js',
-    './src/renderer/markmap.css'
+    './src/renderer/markmap.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'out/renderer'),
@@ -17,8 +17,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   }
