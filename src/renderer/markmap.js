@@ -3,9 +3,10 @@
 import { Markmap } from 'markmap-view';
 import { Base64 } from 'js-base64';
 
-const _svgOptions = {
-  style: (id) => {
-    return `\
+function _buildSvgOption(attr) {
+  return {
+    style: (id) => {
+      return `\
 .${id}-container code[class*=language-], .${id}-container pre[class*=language-] {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
@@ -33,10 +34,14 @@ const _svgOptions = {
   border-radius: .3em;
   white-space: normal
 }
+.${id}-container .katex {
+  padding: 0 ${attr.kpadr ?? 0.5}em;
+}
 `
-  },
-  autoFit: true
-};
+    },
+    autoFit: true
+  };
+}
 
 function _resizeMarkmap(mm, scale) {
   const { minX, maxX, minY, maxY } = mm.state;
@@ -54,7 +59,7 @@ function _renderMarkmap() {
   const svgs = document.querySelectorAll('.markmap');
   for (const svg of svgs) {
     const data = JSON.parse(Base64.decode(svg.innerHTML));
-    _resizeMarkmap(Markmap.create(svg, _svgOptions, data.root), data.attrs.scale ?? 1.1);
+    _resizeMarkmap(Markmap.create(svg, _buildSvgOption(data.attrs), data.root), data.attrs.scale ?? 1.1);
   }
 }
 

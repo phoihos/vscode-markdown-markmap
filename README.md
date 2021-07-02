@@ -21,7 +21,7 @@ To install this extension go to `View->Extensions` and search for `markdown-mark
 Create mindmap in markdown using `markmap` (or `mdmm` or `mmmd`) fenced code blocks:
 
 ~~~markdown
-```markmap {scale=1.1}
+```markmap
 # Mindmap
 
 ## Extension
@@ -56,19 +56,20 @@ Syntax highlighting support exactly the same as VSCode's `markdown`.
 ## Attributes
 
 Add attributes to `markmap` fenced code block with `{key=value}` curly brackets:
+> Multiple attributes are separated by `space`.
 
 ~~~markdown
-```markmap {scale=1.1}
+```markmap {scale=1.1 kpadr=0.5}
 ···
 ```
 ~~~
 
 Table of available attributes:
 
-| Key   | Default Value | Description                   |
-| ----- | ------------- | ----------------------------- |
-| scale | `1.1`         | Scale the preview render size |
-
+| Key   | Default Value    | Description                                                                                               |
+| ----- | ---------------- | --------------------------------------------------------------------------------------------------------- |
+| scale | `1.1`            | Scale the preview render size                                                                             |
+| kpadr | `0.5` (Unit: em) | Adjust `padding-right` style for the KaTeX (Math Formula) rendering<br>(Use this option **if your Math Formula is cropped**) |
 
 ## Markmap Visualizing
 
