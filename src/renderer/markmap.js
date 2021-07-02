@@ -35,7 +35,8 @@ function _buildSvgOption(attr) {
   white-space: normal
 }
 .${id}-container .katex {
-  padding: 0 ${attr.kpadr ?? 0.5}em;
+  padding: 0;
+  padding-right: ${attr.kpadr ?? 1}em;
 }
 `
     },

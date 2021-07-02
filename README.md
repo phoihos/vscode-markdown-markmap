@@ -43,7 +43,10 @@ Create mindmap in markdown using `markmap` (or `mdmm` or `mmmd`) fenced code blo
 -   ```js
     console.log('code block');
     ```
-- MathJax - $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+- Katex
+  - $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+  - $$ \int_{0}^{\infty} f(x) dx $$
+  - $ \\pm\\sqrt{a^2 + b^2}$
 ```
 ~~~
 
@@ -59,7 +62,7 @@ Add attributes to `markmap` fenced code block with `{key=value}` curly brackets:
 > Multiple attributes are separated by `space`.
 
 ~~~markdown
-```markmap {scale=1.1 kpadr=0.5}
+```markmap {scale=1.1 kpadr=1.0}
 ···
 ```
 ~~~
@@ -69,7 +72,7 @@ Table of available attributes:
 | Key   | Default Value    | Description                                                                                               |
 | ----- | ---------------- | --------------------------------------------------------------------------------------------------------- |
 | scale | `1.1`            | Scale the preview render size                                                                             |
-| kpadr | `0.5` (Unit: em) | Adjust `padding-right` style for the KaTeX (Math Formula) rendering<br>(Use this option **if your Math Formula is cropped**) |
+| kpadr | `1.0` (Unit: em) | Adjust `padding-right` style for the KaTeX (Math Formula) rendering<br>(Use this option **if your Math Formula is cropped**) |
 
 ## Markmap Visualizing
 
