@@ -1,6 +1,6 @@
 'use strict';
 
-import * as WebFont from 'webfontloader';
+import WebFont from 'webfontloader';
 import { Markmap } from 'markmap-view';
 import { Base64 } from 'js-base64';
 
@@ -26,6 +26,12 @@ const _katexFontConfig = {
 };
 
 function _buildSvgOption(attr) {
+  function isValidColor(color) {
+    const style = (new Option()).style;
+    style.color = color;
+    return style.color !== '';
+  }
+
   return {
     style: (id) => {
       return `\
@@ -58,7 +64,7 @@ function _buildSvgOption(attr) {
 }
 `;
     },
-    color: attr.color?.length > 0 ? () => `${attr.color}` : Markmap.defaultOptions.color,
+    color: isValidColor(attr.color) ? () => attr.color : Markmap.defaultOptions.color,
     autoFit: true
   };
 }
