@@ -2,6 +2,13 @@
 
 All notable changes to the "Markdown Preview Markmap Support" extension will be documented in this file.
 
+## [1.4.0] - 2021-07-08
+
+- Fixed : KaTeX (Math Formula) rendering cutting issue (Related issue: #5)
+- Removed : `kpadr` attribute as unnecessary
+- Added : `color` attribute to change the **line color** of the mindmap
+- Updated : `README.md`
+
 ## [1.3.2] - 2021-07-02
 
 - Changed : The default value of `kpadr` attribute changed to `1.0` (also internal calculation has changed)

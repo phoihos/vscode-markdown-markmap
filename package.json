@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/phoihos/vscode-markdown-markmap/blob/master/README.md",
 	"license": "MIT",
-	"version": "1.3.2",
+	"version": "1.4.0",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -35,7 +35,6 @@
 			"./out/renderer/markmap.bundle.js"
 		],
 		"markdown.previewStyles": [
-			"./node_modules/katex/dist/katex.min.css",
 			"./out/renderer/markmap.css"
 		],
 		"grammars": [
@@ -69,18 +68,19 @@
 		"eslint": "^7.28.0",
 		"glob": "^7.1.7",
 		"markdown-it": "^12.0.6",
+		"markmap-view": "^0.2.6",
 		"mini-css-extract-plugin": "^1.6.0",
 		"mocha": "^8.4.0",
 		"sass": "^1.35.1",
 		"sass-loader": "^12.1.0",
 		"typescript": "^4.0.2",
 		"vscode-test": "^1.4.0",
+		"webfontloader": "^1.6.28",
 		"webpack": "^5.38.1",
 		"webpack-cli": "^4.7.2"
 	},
 	"dependencies": {
 		"js-base64": "^3.6.1",
-		"markmap-lib": "^0.11.6",
-		"markmap-view": "^0.2.6"
+		"markmap-lib": "^0.11.6"
 	}
 }

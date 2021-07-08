@@ -15,8 +15,8 @@ export default function markdownItMarkmap(md: MarkdownIt) {
         if (_idRecognizer.test(token.info)) {
             try {
                 const attrs = buildAttributes(token.info, token.attrs);
-                const { root } = (new Transformer()).transform(token.content);
-                const data = { attrs, root };
+                const { root, features } = (new Transformer()).transform(token.content);
+                const data = { attrs, root, features };
 
                 return `<svg class="markmap">${Base64.encode(JSON.stringify(data))}</svg>`;
             } catch (ex) {

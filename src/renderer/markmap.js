@@ -1,7 +1,29 @@
 'use strict';
 
+import * as WebFont from 'webfontloader';
 import { Markmap } from 'markmap-view';
 import { Base64 } from 'js-base64';
+
+const _katexName = 'katex';
+const _katexFontConfig = {
+  custom: {
+    families: [
+      'KaTeX_AMS',
+      'KaTeX_Caligraphic:n4,n7',
+      'KaTeX_Fraktur:n4,n7',
+      'KaTeX_Main:n4,n7,i4,i7',
+      'KaTeX_Math:i4,i7',
+      'KaTeX_SansSerif:n4,n7,i4',
+      'KaTeX_Script',
+      'KaTeX_Size1',
+      'KaTeX_Size2',
+      'KaTeX_Size3',
+      'KaTeX_Size4',
+      'KaTeX_Typewriter'
+    ],
+    urls: ['https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css']
+  }
+};
 
 function _buildSvgOption(attr) {
   return {
@@ -34,12 +56,9 @@ function _buildSvgOption(attr) {
   border-radius: .3em;
   white-space: normal
 }
-.${id}-container .katex {
-  padding: 0;
-  padding-right: ${attr.kpadr ?? 1}em;
-}
-`
+`;
     },
+    color: attr.color?.length > 0 ? () => `${attr.color}` : Markmap.defaultOptions.color,
     autoFit: true
   };
 }
@@ -57,11 +76,26 @@ function _resizeMarkmap(mm, scale) {
 }
 
 function _renderMarkmap() {
+  const markmaps = [];
+  const render = () => {
+    for (const { svg, data } of markmaps) {
+      _resizeMarkmap(
+        Markmap.create(svg, _buildSvgOption(data.attrs), data.root),
+        data.attrs.scale ?? 1.1
+      );
+    }
+  };
+  let hasKatex = false;
+
   const svgs = document.querySelectorAll('.markmap');
   for (const svg of svgs) {
     const data = JSON.parse(Base64.decode(svg.innerHTML));
-    _resizeMarkmap(Markmap.create(svg, _buildSvgOption(data.attrs), data.root), data.attrs.scale ?? 1.1);
+    markmaps.push({ svg, data });
+    hasKatex = data.features[_katexName] ?? hasKatex;
   }
+
+  if (!hasKatex) render();
+  else WebFont.load({ ..._katexFontConfig, active: render, inactive: render });
 }
 
 _renderMarkmap();

@@ -62,17 +62,17 @@ Add attributes to `markmap` fenced code block with `{key=value}` curly brackets:
 > Multiple attributes are separated by `space`.
 
 ~~~markdown
-```markmap {scale=1.1 kpadr=1.0}
+```markmap {scale=1.1 color=#888}
 ···
 ```
 ~~~
 
 Table of available attributes:
 
-| Key   | Default Value    | Description                                                                                               |
-| ----- | ---------------- | --------------------------------------------------------------------------------------------------------- |
-| scale | `1.1`            | Scale the preview render size                                                                             |
-| kpadr | `1.0` (Unit: em) | Adjust `padding-right` style for the KaTeX (Math Formula) rendering<br>(Use this option **if your Math Formula is cropped**) |
+| Key   | Default Value        | Description                                                                                                            |
+| ----- | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| scale | `1.1`                | Scale the preview render size                                                                                          |
+| color | Empty (for Colorful) | Change the line color with predefined color name, or with HEX, RGB, HSL value<br>(RGB/HSL value must be **spaceless**) |
 
 ## Markmap Visualizing
 
