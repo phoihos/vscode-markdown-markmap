@@ -1,6 +1,6 @@
 # Markdown Preview Markmap Support
 
-Visualize Markdown as Mindmap (A.K.A Markmap) to VSCode's built-in markdown preview.
+Visualize Markdown as Mindmap (A.K.A Markmap) to VS Code's built-in markdown preview.
 
 ![Demo 1](./images/readme/demo1.png)
 
@@ -52,7 +52,7 @@ Create mindmap in markdown using `markmap` (or `mdmm` or `mmmd`) fenced code blo
 
 ## Syntax Highlighting
 
-Syntax highlighting support exactly the same as VSCode's `markdown`.
+Syntax highlighting support exactly the same as VS Code's `markdown`.
 
 ![Demo 2](./images/readme/demo2.png)
 

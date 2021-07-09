@@ -40,7 +40,7 @@
 		"grammars": [
 			{
 				"scopeName": "markdown.codeblock.markmap",
-				"path": "./syntaxes/codeblock.json",
+				"path": "./syntaxes/markmap.tmLanguage.json",
 				"injectTo": [
 					"text.html.markdown"
 				]

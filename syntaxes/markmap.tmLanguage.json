@@ -1,5 +1,6 @@
 {
-	"fileTypes": [],
+	"name": "Markdown Markmap",
+	"scopeName": "markdown.codeblock.markmap",
 	"injectionSelector": "L:text.html.markdown",
 	"patterns": [
 		{
@@ -8,9 +9,8 @@
 	],
 	"repository": {
 		"fenced_code_block_markmap": {
+			"name": "meta.embedded.block.markmap",
 			"begin": "(^|\\G)(\\s*)(`{3,}|~{3,})\\s*(?i:(markmap|mdmm|mmmd)((\\s+|:|\\{)[^`~]*)?$)",
-			"name": "markup.fenced_code.block.markdown",
-			"end": "(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$",
 			"beginCaptures": {
 				"3": {
 					"name": "punctuation.definition.markdown"
@@ -22,6 +22,7 @@
 					"name": "fenced_code.block.language.attributes.markdown"
 				}
 			},
+			"end": "(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$",
 			"endCaptures": {
 				"3": {
 					"name": "punctuation.definition.markdown"
@@ -29,17 +30,9 @@
 			},
 			"patterns": [
 				{
-					"begin": "(^|\\G)(\\s*)(.*)",
-					"while": "(^|\\G)(?!\\s*([`~]{3,})\\s*$)",
-					"contentName": "meta.embedded.block.markmap",
-					"patterns": [
-						{
-							"include": "text.html.markdown"
-						}
-					]
+					"include": "text.html.markdown"
 				}
 			]
 		}
-	},
-	"scopeName": "markdown.codeblock.markmap"
+	}
 }

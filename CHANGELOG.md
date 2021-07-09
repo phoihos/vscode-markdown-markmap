@@ -2,6 +2,11 @@
 
 All notable changes to the "Markdown Preview Markmap Support" extension will be documented in this file.
 
+## [Unreleased]
+
+- Updated : `color` attribute feature to stable
+- Added : KaTeX (Math Formula) syntax highlighting same as VS Code in VS Code 1.58+
+
 ## [1.4.0] - 2021-07-08
 
 - Fixed : KaTeX (Math Formula) rendering cutting issue (Related issue: #5)
