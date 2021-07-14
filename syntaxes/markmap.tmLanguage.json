@@ -10,7 +10,7 @@
 	"repository": {
 		"fenced_code_block_markmap": {
 			"name": "meta.embedded.block.markmap",
-			"begin": "(^|\\G)(\\s*)(`{3,}|~{3,})\\s*(?i:(markmap|mdmm|mmmd)((\\s+|:|\\{)[^`~]*)?$)",
+			"begin": "(^|\\G)(\\s*)(`{3,}|~{3,})\\s*(?i:(markmap|mdmm|mmmd)((\\s+|:|\\{|\\?)[^`~]*)?$)",
 			"beginCaptures": {
 				"3": {
 					"name": "punctuation.definition.markdown"

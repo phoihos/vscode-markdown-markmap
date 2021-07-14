@@ -6,6 +6,7 @@ All notable changes to the "Markdown Preview Markmap Support" extension will be 
 
 - Updated : `color` attribute feature to stable
 - Added : KaTeX (Math Formula) syntax highlighting same as VS Code in VS Code 1.58+
+- Added : Support specifying attribute value with spaces by single or double quotation marks
 
 ## [1.4.0] - 2021-07-08
 

@@ -1,20 +1,17 @@
 import MarkdownIt = require('markdown-it');
 import { Transformer } from 'markmap-lib';
 import { Base64 } from 'js-base64';
-import { buildAttributes } from './buildAttributes'
-
-const _idRecognizer = /^\s*(markmap|mdmm|mmmd)((\s+|:|\{)[^`~]*)?$/i;
-//const _idRecognizer = /^(markmap|mdmm|mmmd)$/i;
+import { matchMarkmapToken } from './markmapTokenHelper'
 
 export default function markdownItMarkmap(md: MarkdownIt) {
-    const fallback = md.renderer.rules.fence?.bind(md.renderer.rules);
+    const fallback = md.renderer.rules.fence;
 
     md.renderer.rules.fence = (tokens, idx, options, env, self) => {
         const token = tokens[idx];
+        const attrs = matchMarkmapToken(token.info, token.attrs);
 
-        if (_idRecognizer.test(token.info)) {
+        if (attrs !== null) {
             try {
-                const attrs = buildAttributes(token.info, token.attrs);
                 const { root, features } = (new Transformer()).transform(token.content);
                 const data = { attrs, root, features };
 
