@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/phoihos/vscode-markdown-markmap/blob/master/README.md",
 	"license": "MIT",
-	"version": "1.4.0",
+	"version": "1.4.3",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
