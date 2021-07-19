@@ -1,7 +1,7 @@
 {
 	"name": "markdown-markmap",
 	"displayName": "Markdown Preview Markmap Support",
-	"description": "Visualize Markdown as Mindmap (A.K.A Markmap) to VSCode's built-in markdown preview",
+	"description": "Visualize Markdown as Mindmap (A.K.A Markmap) to VS Code's built-in markdown preview",
 	"icon": "images/icon.png",
 	"publisher": "phoihos",
 	"repository": {
@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/phoihos/vscode-markdown-markmap/blob/master/README.md",
 	"license": "MIT",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"engines": {
 		"vscode": "^1.49.0"
 	},

@@ -2,6 +2,10 @@
 
 All notable changes to the "Markdown Preview Markmap Support" extension will be documented in this file.
 
+## [1.4.4] - 2021-07-19
+
+- Fixed : Pre-parsed svg data does not removed on rendering
+
 ## [1.4.3] - 2021-07-16
 
 - Updated : `color` attribute feature to stable

@@ -96,6 +96,8 @@ function _renderMarkmap() {
   const svgs = document.querySelectorAll('.markmap');
   for (const svg of svgs) {
     const data = JSON.parse(Base64.decode(svg.innerHTML));
+    svg.innerHTML = '';
+
     markmaps.push({ svg, data });
     hasKatex = data.features[_katexName] ?? hasKatex;
   }
