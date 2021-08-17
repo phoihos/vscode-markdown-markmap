@@ -11,7 +11,7 @@
 	"bugs": {
 		"url": "https://github.com/phoihos/vscode-markdown-markmap/issues"
 	},
-	"homepage": "https://github.com/phoihos/vscode-markdown-markmap/blob/master/README.md",
+	"homepage": "https://github.com/phoihos/vscode-markdown-markmap#readme",
 	"license": "MIT",
 	"version": "1.4.4",
 	"engines": {
