@@ -27,7 +27,7 @@ const _katexFontConfig = {
 
 function _buildSvgOption(attr) {
   function isValidColor(color) {
-    const style = (new Option()).style;
+    const style = new Option().style;
     style.color = color;
     return style.color !== '';
   }

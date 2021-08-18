@@ -1,0 +1,9 @@
+{
+  // See https://github.com/streetsidesoftware/vscode-spell-checker/blob/master/packages/client/README.md#cspelljson
+  // for the documentation about the cspell.json format
+  "version": "0.1",
+  "enabled": true,
+  "allowCompoundWords": true,
+  "words": ["eqeqeq", "phoihos", "mdmm", "mmmd", "svgs", "prismjs", "katex", "Consolas"],
+  "flagWords": []
+}
