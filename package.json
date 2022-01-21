@@ -1,86 +1,86 @@
 {
-	"name": "markdown-markmap",
-	"displayName": "Markdown Preview Markmap Support",
-	"description": "Visualize Markdown as Mindmap (A.K.A Markmap) to VS Code's built-in markdown preview",
-	"icon": "images/icon.png",
-	"publisher": "phoihos",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/phoihos/vscode-markdown-markmap"
-	},
-	"bugs": {
-		"url": "https://github.com/phoihos/vscode-markdown-markmap/issues"
-	},
-	"homepage": "https://github.com/phoihos/vscode-markdown-markmap#readme",
-	"license": "MIT",
-	"version": "1.4.4",
-	"engines": {
-		"vscode": "^1.49.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"keywords": [
-		"markdown mindmap",
-		"markmap",
-		"mindmap",
-		"markdown-it",
-		"markdown-it-plugin"
-	],
-	"activationEvents": [],
-	"main": "./out/extension.js",
-	"contributes": {
-		"markdown.markdownItPlugins": true,
-		"markdown.previewScripts": [
-			"./out/renderer/markmap.bundle.js"
-		],
-		"markdown.previewStyles": [
-			"./out/renderer/markmap.css"
-		],
-		"grammars": [
-			{
-				"scopeName": "markdown.codeblock.markmap",
-				"path": "./syntaxes/markmap.tmLanguage.json",
-				"injectTo": [
-					"text.html.markdown"
-				]
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run bundle:deps & npm run compile",
-		"bundle:deps": "webpack --mode production",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.3",
-		"@types/markdown-it": "^12.0.2",
-		"@types/mocha": "^8.2.2",
-		"@types/node": "^14.17.3",
-		"@types/vscode": "^1.49.0",
-		"@typescript-eslint/eslint-plugin": "^4.26.1",
-		"@typescript-eslint/parser": "^4.26.1",
-		"css-loader": "^5.2.6",
-		"eslint": "^7.28.0",
-		"glob": "^7.1.7",
-		"markdown-it": "^12.0.6",
-		"markmap-view": "^0.2.6",
-		"mini-css-extract-plugin": "^1.6.0",
-		"mocha": "^8.4.0",
-		"sass": "^1.35.1",
-		"sass-loader": "^12.1.0",
-		"typescript": "^4.0.2",
-		"vscode-test": "^1.4.0",
-		"webfontloader": "^1.6.28",
-		"webpack": "^5.38.1",
-		"webpack-cli": "^4.7.2"
-	},
-	"dependencies": {
-		"js-base64": "^3.6.1",
-		"markmap-lib": "^0.11.6"
-	}
+  "name": "markdown-markmap",
+  "displayName": "Markdown Preview Markmap Support",
+  "description": "Visualize Markdown as Mindmap (A.K.A Markmap) to VS Code's built-in markdown preview",
+  "icon": "images/icon.png",
+  "publisher": "phoihos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoihos/vscode-markdown-markmap"
+  },
+  "bugs": {
+    "url": "https://github.com/phoihos/vscode-markdown-markmap/issues"
+  },
+  "homepage": "https://github.com/phoihos/vscode-markdown-markmap#readme",
+  "license": "MIT",
+  "version": "1.4.5",
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown mindmap",
+    "markmap",
+    "mindmap",
+    "markdown-it",
+    "markdown-it-plugin"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewScripts": [
+      "./out/renderer/markmap.bundle.js"
+    ],
+    "markdown.previewStyles": [
+      "./out/renderer/markmap.css"
+    ],
+    "grammars": [
+      {
+        "scopeName": "markdown.codeblock.markmap",
+        "path": "./syntaxes/markmap.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run bundle:deps & npm run compile",
+    "bundle:deps": "webpack --mode production",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/markdown-it": "^12.2.3",
+    "@types/mocha": "^8.2.3",
+    "@types/node": "^14.18.9",
+    "@types/vscode": "^1.49.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "css-loader": "^5.2.7",
+    "eslint": "^7.32.0",
+    "glob": "^7.2.0",
+    "markdown-it": "^12.3.2",
+    "markmap-view": "^0.2.7",
+    "mini-css-extract-plugin": "^2.5.2",
+    "mocha": "^8.4.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0",
+    "typescript": "^4.0.2",
+    "vscode-test": "^1.4.0",
+    "webfontloader": "^1.6.28",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "js-base64": "^3.7.2",
+    "markmap-lib": "^0.12.0"
+  }
 }
