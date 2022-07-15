@@ -2,6 +2,10 @@
 
 All notable changes to the "Markdown Preview Markmap Support" extension will be documented in this file.
 
+## [1.4.6] - 2022-07-15
+
+- Fixed : Markmap does not rerender in preview on VS Code 1.63+
+
 ## [1.4.5] - 2022-01-21
 
 - Updated : Internal dependencies
