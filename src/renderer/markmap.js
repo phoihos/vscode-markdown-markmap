@@ -106,4 +106,6 @@ function _renderMarkmap() {
   else WebFont.load({ ..._katexFontConfig, active: render, inactive: render });
 }
 
+window.addEventListener('vscode.markdown.updateContent', _renderMarkmap);
+
 _renderMarkmap();
