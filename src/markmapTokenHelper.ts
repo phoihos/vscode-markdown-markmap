@@ -1,12 +1,9 @@
-interface IAttributes {
+interface Attributes {
   [key: string]: string;
 }
 
-function _buildMarkmapAttrs(
-  fenceAttrs: string,
-  tokenAttrs: [string, string][] | null
-): IAttributes {
-  const attrs: IAttributes = {};
+function _buildMarkmapAttrs(fenceAttrs: string, tokenAttrs: [string, string][] | null): Attributes {
+  const attrs: Attributes = {};
 
   const regexValidation = /^\s*\w+\s*=/;
   if (regexValidation.test(fenceAttrs)) {
@@ -28,7 +25,7 @@ function _buildMarkmapAttrs(
 export function matchMarkmapToken(
   tokenInfo: string,
   tokenAttrs: [string, string][] | null
-): IAttributes | null {
+): Attributes | null {
   const regexCurlyBrackets = /^\s*(markmap|mdmm|mmmd)\s*((\{)([^`~]*)(\})\s*)?$/i;
   const regexSingleMark = /^\s*(markmap|mdmm|mmmd)\s*((:|\?)([^`~]*))?$/i;
 
